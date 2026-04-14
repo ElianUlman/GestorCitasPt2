@@ -1,12 +1,12 @@
 import Cita from "./cita"
 
-function Lista({citas}) {
+function Lista({citas, borrarCita}) {
     
     const citasProcesadas = []
 
     for (let i = 0; i < 3; i++) {
 
-        citasProcesadas.push(<Cita key = {i} cita = {citas[i]}/>)
+        citasProcesadas.push(<Cita key = {i} cita = {citas[i]} borrarCita = {borrarCita}/>)
     }
 
     return (

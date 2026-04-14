@@ -21,7 +21,6 @@ function Formulario({ agregarCita }) {
             return;
         }
 
-        console.log(cita)
         agregarCita(cita)
 
         setCita({

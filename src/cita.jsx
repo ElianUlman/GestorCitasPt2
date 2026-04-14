@@ -1,11 +1,9 @@
-function Cita({cita}) {
-
-    console.log(cita)
+function Cita({cita, borrarCita}) {
 
     if(!cita){
         return
     }
-    
+
     return (
 
         <div className ="cita">
@@ -13,7 +11,7 @@ function Cita({cita}) {
             <p>Dueño: <span>{cita.propietario}</span></p>
             <p>Fecha: <span>{cita.fecha}</span></p>
             <p>Hora: <span>{cita.hora}</span></p>
-            <p>Sintomas: <span>{cita.sintomas}</span></p><button className ="button elimnar u-full-width">Eliminar ×</button>
+            <p>Sintomas: <span>{cita.sintomas}</span></p><button className ="button elimnar u-full-width" onClick={() => borrarCita(cita)}>Eliminar ×</button>
         </div>
     );
 }

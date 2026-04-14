@@ -11,13 +11,18 @@ function App() {
     setCitas([...citas, cita]);
   }
 
+ const borrarCita = (citaABorrar) => {
+    const nuevasCitas = citas.filter(cita => cita !== citaABorrar);
+    setCitas(nuevasCitas);
+};
+
   return (
     <>
       <h1>ADMINISTRADOR DE PACIENTES</h1 >
       <div className="container">
         <div className="row">
           <Formulario agregarCita={agregarCita} />
-          <Lista citas={citas} setCitas={setCitas} />
+          <Lista citas={citas} borrarCita={borrarCita} />
         </div>
       </div>
 
