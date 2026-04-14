@@ -1,19 +1,19 @@
 import Cita from "./cita"
 
-function Lista() {
-
-    const citas = []
+function Lista({citas}) {
+    
+    const citasProcesadas = []
 
     for (let i = 0; i < 3; i++) {
 
-        citas.push(<Cita key = {i}/>)
+        citasProcesadas.push(<Cita key = {i} cita = {citas[i]}/>)
     }
 
     return (
         <div className ="one-half column">
             <h2>Administra tus citas</h2>
             
-            {citas}
+            {citasProcesadas}
         </div>
     );
 }
