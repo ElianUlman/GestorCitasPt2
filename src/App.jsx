@@ -12,8 +12,14 @@ function App() {
   }
 
  const borrarCita = (citaABorrar) => {
-    const nuevasCitas = citas.filter(cita => cita !== citaABorrar);
-    setCitas(nuevasCitas);
+    const confirmar = window.confirm(
+        `¿Estás seguro que deseas eliminar la cita de ${citaABorrar.mascota}?`
+    );
+
+    if (confirmar) {
+        const nuevasCitas = citas.filter(cita => cita !== citaABorrar);
+        setCitas(nuevasCitas);
+    }
 };
 
   return (
